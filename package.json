@@ -11,14 +11,20 @@
   "dependencies": {
     "@clerk/nextjs": "^4.27.7",
     "@prisma/client": "^5.7.0",
+    "@radix-ui/react-slot": "^1.1.0",
     "@tanstack/react-query": "^5.14.0",
     "@tanstack/react-query-devtools": "^5.14.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
     "dayjs": "^1.11.10",
+    "lucide-react": "^0.456.0",
     "next": "15.0.3",
     "next-themes": "^0.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "recharts": "^2.10.3"
+    "recharts": "^2.10.3",
+    "tailwind-merge": "^2.5.4",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@types/node": "^20",
