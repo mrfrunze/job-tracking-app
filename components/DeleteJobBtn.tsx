@@ -29,6 +29,7 @@ const DeleteJobBtn = ({ id }: { id: string }) => {
       size='sm'
       disabled={isPending}
       onClick={() => {
+        // console.log('Deleting Job ID:', id);
         mutate(id);
       }}
     >{isPending ? 'deleting...' : 'delete'}
