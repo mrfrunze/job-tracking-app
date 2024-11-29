@@ -22,7 +22,7 @@ import {
     updateJobAction,
 } from '@/utils/actions';
 
-import { useToast } from '@/components/ui/use-toast';
+import { useToast } from '@/hooks/use-toast';
 import { useRouter } from 'next/navigation';
 
 function EditJobForm({ jobId }: { jobId: string }){
