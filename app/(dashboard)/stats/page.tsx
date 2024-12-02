@@ -8,8 +8,8 @@ import {
 } from '@tanstack/react-query';
 
 async function StatsPage() {
-  const charts = await getChartsDataAction()
-  console.log(charts);
+  // const charts = await getChartsDataAction()
+  // console.log(charts);
   
     const queryClient = new QueryClient();
   
