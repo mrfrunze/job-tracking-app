@@ -8,17 +8,19 @@ import {
 } from '@tanstack/react-query';
 
 
-async function JobDetailPage({ params }: Awaited<{ params: { id: string } }>) {
-    const queryClient = new QueryClient();
+async function JobDetailPage({ params }: { params: Promise<{ id: string }> }) {
+  const resolvedParams = await params;
+  console.log("Params received:", params);
+  const queryClient = new QueryClient();
   
-    await queryClient.prefetchQuery({
-      queryKey: ['job', params.id],
-      queryFn: () => getSingleJobAction(params.id),
-    });
+  await queryClient.prefetchQuery({
+    queryKey: ['job', resolvedParams.id],
+    queryFn: () => getSingleJobAction(resolvedParams.id),
+  });
   
     return (
       <HydrationBoundary state={dehydrate(queryClient)}>
-        <EditJobForm jobId={params.id} />
+        <EditJobForm jobId={resolvedParams.id} />
       </HydrationBoundary>
     );
 }
