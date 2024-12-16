@@ -9,7 +9,7 @@ import dayjs from 'dayjs';
 
 function authenticateAndRedirect(): string {
     const { userId } = auth();
-    // console.log(`userId - ${userId}`);
+    console.log(`userId - ${userId}`);
     
     if (!userId) redirect('/');
     return userId;
@@ -105,7 +105,7 @@ export async function getAllJobsAction({
 
 export async function deleteJobAction(id: string): Promise<JobType | null> {
   const userId = authenticateAndRedirect();
-  // console.log('UserId:', userId);
+  console.log('UserId:', userId);
 
   try {
     const job: JobType = await prisma.job.delete({
